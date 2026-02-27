@@ -9,21 +9,12 @@ Requires Node.js 18+ and PostgreSQL.
 ```bash
 npm install
 createdb wallet_ledger
-```
-
-Create a `.env` file:
-
-```
-DATABASE_URL="postgresql://localhost:5432/wallet_ledger"
-PORT=3000
-```
-
-Run migrations and start the server:
-
-```bash
+cp .env.example .env        # edit DATABASE_URL if needed
 npm run prisma:migrate
 npm run dev
 ```
+
+The server starts on `http://localhost:3000`.
 
 ## Schema Design
 
