@@ -4,23 +4,23 @@ A ledger-based wallet microservice. Balance is always derived from the sum of le
 
 ## Setup
 
-Requires Node.js 18+ and a PostgreSQL instance.
+Requires Node.js 18+ and PostgreSQL.
 
 ```bash
 npm install
+createdb wallet_ledger
 ```
 
 Create a `.env` file:
 
 ```
-DATABASE_URL="postgresql://<user>:<password>@localhost:5432/wallet_ledger"
+DATABASE_URL="postgresql://localhost:5432/wallet_ledger"
 PORT=3000
 ```
 
-Create the database, run migrations, and start the server:
+Run migrations and start the server:
 
 ```bash
-psql -U <user> -d postgres -c "CREATE DATABASE wallet_ledger;"
 npm run prisma:migrate
 npm run dev
 ```
