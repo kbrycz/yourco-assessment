@@ -8,13 +8,11 @@ Requires Node.js 18+ and PostgreSQL.
 
 ```bash
 npm install
-createdb wallet_ledger
-cp .env.example .env        # edit DATABASE_URL if needed
+createdb wallet_ledger       # safe to skip if it already exists
+cp .env.example .env         # set your PostgreSQL username
 npm run prisma:migrate
-npm run dev
+npm run dev                  # http://localhost:3000
 ```
-
-The server starts on `http://localhost:3000`.
 
 ## Schema Design
 
